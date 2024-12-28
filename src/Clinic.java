@@ -21,7 +21,6 @@ class Clinic {
     public void admitPatient(Patient patient) {
         // Add the patient to the queue and print "Patient <name> admitted."
 
-        // TODO
         patientQueue.add(patient);
         System.out.println("Patient "+patient.getName()+" admitted.");
     }
@@ -35,7 +34,6 @@ class Clinic {
 
         System.out.println("Scheduling appoinments for Day "+dayCount+"...");
 
-        // TODO
         int count =0;
        while(!patientQueue.isEmpty() && count<3){
 
@@ -56,7 +54,6 @@ class Clinic {
         // Provide treatment to a patient only if the patient is admitted. Print "Treatment provided to <name>: <treatment>"
         // Else print "Patient not found in the admitted list."
         
-        // TODO
         if(admittedPatients.contains(patient)){
             System.out.println("Treatment provided to "+patient.getName()+": "+treatment);
         }else{
@@ -70,7 +67,6 @@ class Clinic {
         // Print patient details only if the patient is admitted.
         // Else print "Patient not found in the admitted list."
         
-        // TODO
         if(admittedPatients.contains(patient)){
             System.out.println(patient);
         }else{
@@ -84,7 +80,6 @@ class Clinic {
         // Print appointment details of a patient only if the patient is admitted. "Appointment Details: <name> is scheduled on <appointmentDay>"
         // Else print "Patient not found in the admitted list."
         
-        // TODO
         if(admittedPatients.contains(patient)){
             System.out.println("Appointment Details: "+patient.getName()+" is scheduled on "+patient.getAppointmentDay());
         }else{
@@ -96,8 +91,7 @@ class Clinic {
     // Discharge a patient from the clinic
     public void dischargePatient(Patient patient) {
         // Remove the patient from admitted patients list. Print "Patient <name> discharged."
-
-        // TODO
+        
         if(admittedPatients.contains(patient)){
             admittedPatients.remove(patient);
             System.out.println("Patient "+patient.getName()+" discharged.");
